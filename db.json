@@ -1,0 +1,123 @@
+{
+  "lots": [
+    {
+      "id": "demo-lot-1",
+      "title": "PET bottles — demonstration lot",
+      "description": "Synthetic teaching record. Not a real offer.",
+      "category": "plastic",
+      "type": "sell",
+      "pricePerUnit": 130,
+      "amount": 250,
+      "unit": "кг",
+      "owner": {
+        "id": "demo-seller",
+        "name": "Demo Seller",
+        "role": "seller",
+        "phone": "",
+        "company": "Demo Materials",
+        "city": "Almaty",
+        "reviews": [],
+        "ratingsCount": 0,
+        "rating": null
+      },
+      "location": {
+        "lat": 43.25,
+        "lng": 76.92,
+        "address": "Demo location only",
+        "city": "Almaty"
+      },
+      "status": "active",
+      "paid": false,
+      "dealWith": null,
+      "createdAt": "2026-11-07T00:00:00Z"
+    },
+    {
+      "id": "demo-lot-2",
+      "title": "Cardboard — demonstration lot",
+      "description": "Synthetic teaching record. Not a real offer.",
+      "category": "paper",
+      "type": "sell",
+      "pricePerUnit": 55,
+      "amount": 300,
+      "unit": "кг",
+      "owner": {
+        "id": "demo-seller",
+        "name": "Demo Seller",
+        "role": "seller",
+        "phone": "",
+        "company": "Demo Materials",
+        "city": "Almaty",
+        "reviews": [],
+        "ratingsCount": 0,
+        "rating": null
+      },
+      "location": {
+        "lat": 43.27,
+        "lng": 76.95,
+        "address": "Demo location only",
+        "city": "Almaty"
+      },
+      "status": "active",
+      "paid": false,
+      "dealWith": null,
+      "createdAt": "2026-11-07T00:00:00Z"
+    },
+    {
+      "id": "demo-lot-3",
+      "title": "Metal offcuts — demonstration lot",
+      "description": "Synthetic teaching record. Not a real offer.",
+      "category": "metal",
+      "type": "sell",
+      "pricePerUnit": 850,
+      "amount": 150,
+      "unit": "кг",
+      "owner": {
+        "id": "demo-seller",
+        "name": "Demo Seller",
+        "role": "seller",
+        "phone": "",
+        "company": "Demo Materials",
+        "city": "Almaty",
+        "reviews": [],
+        "ratingsCount": 0,
+        "rating": null
+      },
+      "location": {
+        "lat": 43.23,
+        "lng": 76.89,
+        "address": "Demo location only",
+        "city": "Almaty"
+      },
+      "status": "active",
+      "paid": false,
+      "dealWith": null,
+      "createdAt": "2026-11-07T00:00:00Z"
+    }
+  ],
+  "chats": {},
+  "dealsArchive": [],
+  "users": [
+    {
+      "id": "demo-buyer",
+      "name": "Demo Buyer",
+      "role": "buyer",
+      "phone": "",
+      "company": "Demo Recycling",
+      "city": "Almaty",
+      "reviews": [],
+      "ratingsCount": 0,
+      "rating": null
+    },
+    {
+      "id": "demo-seller",
+      "name": "Demo Seller",
+      "role": "seller",
+      "phone": "",
+      "company": "Demo Materials",
+      "city": "Almaty",
+      "reviews": [],
+      "ratingsCount": 0,
+      "rating": null
+    }
+  ]
+}

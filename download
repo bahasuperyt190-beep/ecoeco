@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+server.js
+coverage/
+.aistudio/
+.DS_Store
+*.log
+.env*
+!.env.example
+verification.json
