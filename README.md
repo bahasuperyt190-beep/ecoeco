@@ -17,17 +17,9 @@ pnpm start
 `build` собирает интерфейс в `dist/` и сервер в `server.js`.
 `start` запускает готовый сервер без tsx и компиляции TypeScript при старте.
 
-## Загрузить исходники на GitHub вручную
-1. Распакуйте `ECO_BRIDGE_Hosting_Source.zip`.
-2. Откройте https://github.com/bahasuperyt190-beep/eco-bridge-final-version.
-3. В меню веток создайте ветку `codex/eco-bridge-node-hosting` от `main` и переключитесь на неё.
-4. Выберите **Add file → Upload files** и перетащите содержимое архива, сохранив папки `src`, `scripts`, `data`.
-5. `package.json`, `server.ts` и `render.yaml` должны лежать в корне репозитория; сам ZIP загружать вместо файлов не нужно.
-6. Сохраните коммит в новой ветке. Файлы старого статического сайта `app.js` и `style.css` в этой ветке новой сборкой не используются.
-
 ## Опубликовать на Render
-1. В Render выберите **New → Web Service**, подключите этот GitHub-репозиторий.
-2. Выберите ветку **codex/eco-bridge-node-hosting**.
+1. В Render выберите **New → Web Service**, подключите https://github.com/bahasuperyt190-beep/ecoeco.
+2. Выберите ветку **codex/fix-project-structure**.
 3. Root Directory оставьте пустым, Runtime выберите **Node**.
 4. Build Command: `pnpm install --frozen-lockfile --prod=false && pnpm run build`.
 5. Start Command: `pnpm start`. Health Check Path: `/api/health`.
