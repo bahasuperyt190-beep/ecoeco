@@ -80,14 +80,14 @@ export const KaspiQrModal: React.FC<KaspiQrModalProps> = ({
 
       const data = await response.json();
       if (data.success) {
-        setTxId(`KP-${Math.floor(100000 + Math.random() * 900000)}`);
+        setTxId(`DEMO-${Math.floor(100000 + Math.random() * 900000)}`);
         setIsSuccess(true);
         onPaymentSuccess(data.lot);
       } else {
         setErrorMessage(data.error || 'Payment error');
       }
     } catch (err: any) {
-      setErrorMessage(lang === 'en' ? 'Could not connect to payment gateway' : lang === 'kk' ? 'Төлем шлюзімен байланыс орнату мүмкін болмады' : 'Не удалось связаться с сервером платежей');
+      setErrorMessage(lang === 'en' ? 'Could not connect to the demo server' : lang === 'kk' ? 'Демо серверге қосылу мүмкін болмады' : 'Не удалось подключиться к демосерверу');
     } finally {
       setIsProcessing(false);
     }
@@ -99,16 +99,16 @@ export const KaspiQrModal: React.FC<KaspiQrModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-      <p className="fixed top-2 left-2 right-2 z-[100] rounded-xl bg-amber-100 p-3 text-center text-sm text-amber-950">{lang === 'en' ? 'SIMULATED PAYMENT — no real money transfer' : lang === 'kk' ? 'ДЕМО ТӨЛЕМ — ақша аударылмайды' : 'ДЕМО ОПЛАТА — реальные деньги не переводятся'}</p>
-      <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden border border-stone-100 flex flex-col">
-        {/* Kaspi Header */}
+      <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full max-h-[calc(100dvh-2rem)] overflow-y-auto border border-stone-100">
+        <p className="bg-amber-100 p-3 text-center text-sm text-amber-950">{lang === 'en' ? 'SIMULATED PAYMENT — no real money transfer' : lang === 'kk' ? 'ДЕМО ТӨЛЕМ — ақша аударылмайды' : 'ДЕМО ОПЛАТА — реальные деньги не переводятся'}</p>
+        {/* Demo payment header */}
         <div className="bg-[#f14635] text-white p-5 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 bg-white text-[#f14635] font-extrabold rounded-xl flex items-center justify-center text-lg shadow-sm">
-              K
+              <QrCode className="w-5 h-5" />
             </div>
             <div>
-              <div className="font-bold text-base tracking-tight leading-none">Kaspi Pay</div>
+              <div className="font-bold text-base tracking-tight leading-none">EcoBridge</div>
               <div className="text-[11px] text-white/80 font-medium">{t.kaspiSafeDeal}</div>
             </div>
           </div>
@@ -176,15 +176,15 @@ export const KaspiQrModal: React.FC<KaspiQrModalProps> = ({
             </div>
 
             {/* QR Code Container */}
-            <div className="relative mx-auto bg-stone-50 p-4 rounded-2xl border border-stone-200 flex flex-col items-center justify-center w-[250px] shadow-sm">
+            <div className="relative mx-auto bg-stone-50 p-4 rounded-2xl border border-stone-200 flex flex-col items-center justify-center w-full max-w-[250px] shadow-sm">
               {qrDataUrl ? (
                 <img
                   src={qrDataUrl}
-                  alt="Kaspi QR"
+                  alt={t.payKaspiQr}
                   className="w-full h-auto rounded-lg mix-blend-multiply"
                 />
               ) : (
-                <div className="w-[200px] h-[200px] flex items-center justify-center text-stone-400">
+                <div className="w-full aspect-square flex items-center justify-center text-stone-400">
                   <QrCode className="w-12 h-12 animate-pulse" />
                 </div>
               )}

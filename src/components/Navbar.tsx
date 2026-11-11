@@ -32,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-2xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-x-3 gap-y-2 py-2 sm:min-h-18">
         {/* Brand */}
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-700 to-emerald-500 text-white flex items-center justify-center font-bold text-lg shadow-sm">
@@ -72,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         )}
 
         {/* Right Action Controls */}
-        <div className="flex items-center gap-2">
+        <div className="flex w-full flex-wrap items-center gap-2 sm:w-auto">
           {/* Language Switcher Control (РУС / ҚАЗ / ENG) */}
           <div className="flex items-center p-1 bg-stone-100 rounded-xl border border-stone-200 text-[11px] font-bold">
             <button
@@ -118,6 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={onOpenAuthModal}
               title={t.switchAccount}
+              aria-label={t.switchAccount}
               className="flex items-center gap-2 py-1.5 px-3 bg-stone-100 hover:bg-stone-200/90 rounded-xl border border-stone-200 text-xs text-stone-800 transition-colors cursor-pointer"
             >
               <div
@@ -148,6 +149,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Archive / Deals Button */}
           <button
             onClick={onOpenArchive}
+            aria-label={t.dealsArchive}
             className="relative py-2 px-2.5 sm:px-3 bg-stone-50 hover:bg-stone-100 text-stone-700 border border-stone-200 rounded-xl text-xs font-semibold transition-colors flex items-center gap-1.5"
           >
             <Archive className="w-4 h-4 text-stone-600" />
@@ -162,10 +164,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Create Lot Button */}
           <button
             onClick={onOpenCreateLot}
+            aria-label={t.createLot}
             className="py-2 px-3 sm:px-4 bg-emerald-600 hover:bg-emerald-700 active:scale-98 text-white font-bold rounded-xl text-xs transition-all shadow-sm flex items-center gap-1.5"
           >
             <Plus className="w-4 h-4" />
-            <span className="hidden sm:inline">{t.createLot}</span>
+            <span className="inline">{t.createLot}</span>
           </button>
 
           {/* Clear Database Button */}

@@ -190,7 +190,7 @@ export const ChatDrawer: React.FC<ChatDrawerProps> = ({
                 onClick={() => onOpenKaspiPayment(lot)}
                 className="px-2.5 py-1 bg-[#f14635] hover:bg-[#d9291b] text-white font-bold rounded-lg text-xs transition-colors cursor-pointer"
               >
-                Kaspi Pay
+                {t.payKaspiQr}
               </button>
             )}
 
